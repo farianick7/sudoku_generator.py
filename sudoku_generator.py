@@ -87,3 +87,7 @@ def generate_sudoku(size, removed):
     generator.remove_cells()
     return generator.get_board()
 
+if __name__ == "__main__":
+    board = generate_sudoku(9, 40) 
+    for row in board:
+        print(" ".join(str(num) if num != 0 else "." for num in row))
